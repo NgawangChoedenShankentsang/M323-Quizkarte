@@ -113,18 +113,21 @@ const deleteQuizCard = (quizCard) => {
 
 // Reveal Quiz Card
 const revealQuizCard = (quizCard) => {
-  const userAnswer = prompt(quizCard.question);
+  const userAnswer = prompt("Question: " + quizCard.question);
 
   const rankQuizCard = (userAnswer) => {
     if (userAnswer.toLowerCase() === quizCard.answer.toLowerCase()) {
       quizCard.rank += 2;
-    } else if (userAnswer !== "") {
-      quizCard.rank += 1;
+      alert("Correct");
     }
-
-    alert("Correct Answer: " + quizCard.answer);
+     else if (userAnswer !== quizCard.answer.toLowerCase()) {
+      alert("Wrong, answer is : " + quizCard.answer);
+    }
+    
+    
     renderQuizCards();
   }
 
   rankQuizCard(userAnswer);
 }
+

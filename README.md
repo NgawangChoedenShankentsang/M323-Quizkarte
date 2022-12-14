@@ -1,11 +1,12 @@
 # Quizlet App
-This is a simple Quizlet App created using HTML, CSS and JavaScript. The app allows users to create quiz cards with questions and answers, edit the cards, delete the cards, and reveal the answers of the cards. 
+This is a simple Quizlet App created using HTML, CSS and JavaScript. The app allows users to create quiz cards with questions and answers, edit the cards, delete the cards, and Answering to the Existence Quiz Card Questions.
 
 ## Features
 - Create quiz cards with questions and answers
 - Edit the cards
 - Delete the cards
-- Reveal the answers of the cards
+- Answer to the Question
+- Get Feedback from Answering the Question
 
 ## Usage
 1. Clone the repository.
@@ -16,11 +17,13 @@ This is a simple Quizlet App created using HTML, CSS and JavaScript. The app all
 6. To delete the card, click on the `Delete` button.
 7. To reveal the answer, click on the `Reveal` button.
 
-## Note
-node_modules is hiden in .gitigore file. 
-```bash
-ls 
-```
+## Source
+NodeJs <https://github.com/coreybutler/nvm-windows>
+
+W3School <https://www.w3schools.com/js/>
+
+<https://codingartistweb.com/2022/08/flashcard-app-with-javascript/>
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
