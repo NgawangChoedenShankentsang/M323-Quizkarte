@@ -1,3 +1,5 @@
+// Functional Programming
+
 const quizletContainer = document.querySelector(".quizlet-container");
 const quizletCardsContainer = document.querySelector(".quizlet-cards-container");
 
@@ -9,16 +11,19 @@ createQuizCardBtn.addEventListener("click", () => {
   const questionInput = document.querySelector("#question-input");
   const answerInput = document.querySelector("#answer-input");
 
-  if (questionInput.value !== "" && answerInput.value !== "") {
+  const createQuizCard = (question, answer) => {
     const quizCard = {
-      question: questionInput.value,
-      answer: answerInput.value,
+      question: question,
+      answer: answer,
       rank: 0
     }
 
     quizCards.push(quizCard);
     renderQuizCards();
+  }
 
+  if (questionInput.value !== "" && answerInput.value !== "") {
+    createQuizCard(questionInput.value, answerInput.value);
     questionInput.value = "";
     answerInput.value = "";
   }
@@ -28,11 +33,13 @@ createQuizCardBtn.addEventListener("click", () => {
 const renderQuizCards = () => {
   quizletCardsContainer.innerHTML = "";
 
-  quizCards.sort((a, b) => {
-    return a.rank - b.rank;
-  });
+  const sortQuizCards = () => {
+    quizCards.sort((a, b) => {
+      return a.rank - b.rank;
+    });
+  }
 
-  quizCards.forEach((quizCard) => {
+  const renderQuizCard = (quizCard) => {
     const quizCardElement = document.createElement("div");
     quizCardElement.classList.add("quizlet-card");
 
@@ -68,7 +75,10 @@ const renderQuizCards = () => {
     quizCardElement.appendChild(revealButton);
 
     quizletCardsContainer.appendChild(quizCardElement);
-  });
+  }
+
+  sortQuizCards();
+  quizCards.forEach(quizCard => renderQuizCard(quizCard));
 }
 
 // Edit Quiz Card
@@ -76,33 +86,45 @@ const editQuizCard = (quizCard) => {
   const editQuestionInput = prompt("Edit Question", quizCard.question);
   const editAnswerInput = prompt("Edit Answer", quizCard.answer);
 
-  if (editQuestionInput !== "" && editAnswerInput !== "") {
-    quizCard.question = editQuestionInput;
-    quizCard.answer = editAnswerInput;
+  const editQuizCard = (question, answer) => {
+    quizCard.question = question;
+    quizCard.answer = answer;
 
     renderQuizCards();
+  }
+
+  if (editQuestionInput !== "" && editAnswerInput !== "") {
+    editQuizCard(editQuestionInput, editAnswerInput);
   }
 }
 
 // Delete Quiz Card
 const deleteQuizCard = (quizCard) => {
-  quizCards = quizCards.filter((qCard) => {
-    return qCard !== quizCard;
-  });
+  const deleteQuizCard = (quizCard) => {
+    quizCards = quizCards.filter((qCard) => {
+      return qCard !== quizCard;
+    });
 
-  renderQuizCards();
+    renderQuizCards();
+  }
+
+  deleteQuizCard(quizCard);
 }
 
 // Reveal Quiz Card
 const revealQuizCard = (quizCard) => {
   const userAnswer = prompt(quizCard.question);
 
-  if (userAnswer.toLowerCase() === quizCard.answer.toLowerCase()) {
-    quizCard.rank += 2;
-  } else if (userAnswer !== "") {
-    quizCard.rank += 1;
+  const rankQuizCard = (userAnswer) => {
+    if (userAnswer.toLowerCase() === quizCard.answer.toLowerCase()) {
+      quizCard.rank += 2;
+    } else if (userAnswer !== "") {
+      quizCard.rank += 1;
+    }
+
+    alert("Correct Answer: " + quizCard.answer);
+    renderQuizCards();
   }
 
-  alert("Correct Answer: " + quizCard.answer);
-  renderQuizCards();
+  rankQuizCard(userAnswer);
 }

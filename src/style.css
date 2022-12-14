@@ -1,34 +1,40 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
 .quizlet-container {
-  width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius:10px;
-  box-shadow: 0px 5px 8px #ddd;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
 }
 
 .quizlet-creation-container {
+  margin-top: 5%;
   margin-bottom: 20px;
-  border-radius:10px;
-  box-shadow: 0px 5px 8px #ddd;
 }
 
 .quizlet-creation-inputs {
   margin-top: 10px;
-  border-radius:10px;
-  box-shadow: 0px 5px 8px #ddd;
+  width: auto;
+  margin-left: 5%;
 }
 
 .quizlet-cards-container {
   margin-top: 20px;
   border-radius:10px;
-  box-shadow: 0px 5px 8px #ddd;
+  box-shadow: 0px 5px 8px rebeccapurple;
+  width: 90%;
+  margin-left: 5%;
+  background-color: grey;
 }
 
 .quizlet-cards {
   margin-top: 10px;
   border-radius:10px;
-  box-shadow: 0px 5px 8px #ddd;
-
 }
 
 .quizlet-card {

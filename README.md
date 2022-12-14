@@ -9,7 +9,7 @@ This is a simple Quizlet App created using HTML, CSS and JavaScript. The app all
 
 ## Usage
 1. Clone the repository.
-2. Open the `index.html` file in your browser.
+2. Open the `index.html` file in your browser
 3. Enter the question and answer for the quiz card. 
 4. Click on the `Create Quiz Card` button to create the card.
 5. To edit the card, click on the `Edit` button.
@@ -18,6 +18,9 @@ This is a simple Quizlet App created using HTML, CSS and JavaScript. The app all
 
 ## Note
 node_modules is hiden in .gitigore file. 
+```bash
+ls 
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
