@@ -1,0 +1,70 @@
+.quizlet-container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius:10px;
+  box-shadow: 0px 5px 8px #ddd;
+}
+
+.quizlet-creation-container {
+  margin-bottom: 20px;
+  border-radius:10px;
+  box-shadow: 0px 5px 8px #ddd;
+}
+
+.quizlet-creation-inputs {
+  margin-top: 10px;
+  border-radius:10px;
+  box-shadow: 0px 5px 8px #ddd;
+}
+
+.quizlet-cards-container {
+  margin-top: 20px;
+  border-radius:10px;
+  box-shadow: 0px 5px 8px #ddd;
+}
+
+.quizlet-cards {
+  margin-top: 10px;
+  border-radius:10px;
+  box-shadow: 0px 5px 8px #ddd;
+
+}
+
+.quizlet-card {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quizlet-card-question {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.quizlet-card-answer {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.quizlet-card-rank {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.quizlet-card-button {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  margin-left: 10px;
+}
